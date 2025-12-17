@@ -3,9 +3,9 @@
 **Contributors:** wilcosky  
 **Tags:** blocks, gutenberg, wiki, collaboration, version-control  
 **Requires at least:** 5.0  
-**Tested up to:** 6.8  
+**Tested up to:** 6.9
 **Requires PHP:** 8.0  
-**Stable tag:** 1.1.5  
+**Stable tag:** 1.1.6
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -90,6 +90,9 @@ The plugin includes an uninstall option that can completely remove all wiki data
 6. Merge action button on frontend
 
 ## Changelog
+
+### 1.1.6
+- Compatible with WordPress 6.9
 
 ### 1.1.5
 - Fixed iOS Brave browser bugs

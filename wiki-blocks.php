@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Wiki Blocks
  * Description: Add wiki functionality to Gutenberg blocks with version control and user collaboration features.
- * Version: 1.1.5
+ * Version: 1.1.6
  * Author: Billy Wilcosky
  * Author URI: https://wilcosky.com
  * License: GPL v2 or later
@@ -10,12 +10,12 @@
  * Text Domain: wiki-blocks
  * Domain Path: /languages
  * Requires at least: 5.0
- * Tested up to: 6.8
+ * Tested up to: 6.9
  * Requires PHP: 8.0
  *
  * @package WikiBlocks
  * @author Billy Wilcosky
- * @version 1.1.5
+ * @version 1.1.6
  */
 
 // Prevent direct access
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define plugin constants
-define( 'WILCOSKYWB_WIKI_BLOCKS_VERSION', '1.1.5' );
+define( 'WILCOSKYWB_WIKI_BLOCKS_VERSION', '1.1.6' );
 define( 'WILCOSKYWB_WIKI_BLOCKS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WILCOSKYWB_WIKI_BLOCKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'WILCOSKYWB_WIKI_BLOCKS_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
