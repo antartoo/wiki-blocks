@@ -437,12 +437,12 @@ class Wilcoskywb_Wiki_Blocks_Database {
 		}
 
 		if ( ! $settings ) {
-			// Return default settings
+			// Return saved values from global settings
 			return array(
-				'merge_permissions' => array( 'administrator' ),
-				'browse_permissions' => array( 'administrator', 'editor', 'author', 'contributor', 'subscriber' ),
-				'suggest_permissions' => array( 'administrator', 'editor', 'author', 'contributor', 'subscriber' ),
-				'require_login_browse' => false,
+				'merge_permissions' => get_option( 'wilcoskywb_wiki_blocks_merge_permissions', array( 'administrator' ) ),
+				'browse_permissions' => get_option( 'wilcoskywb_wiki_blocks_browse_permissions', array( 'administrator', 'editor', 'author', 'contributor', 'subscriber' ) ),
+				'suggest_permissions' => get_option( 'wilcoskywb_wiki_blocks_suggest_permissions', array( 'administrator', 'editor', 'author', 'contributor', 'subscriber' ) ),
+				'require_login_browse' => get_option( 'wilcoskywb_wiki_blocks_require_login_browse', false ),
 			);
 		}
 
