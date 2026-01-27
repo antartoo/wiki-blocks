@@ -193,7 +193,7 @@ class Wilcoskywb_Wiki_Blocks_Ajax {
 				'content' => $decoded_content,
 				'change_summary' => $version->change_summary,
 				'is_current' => (bool) $version->is_current,
-				'created_at' => $version->created_at,
+				'created_at' => $version->created_at . " UTC", // add timezone info to the date string for frontend JS to correctly display as locale time, database timestamp retrieved is suppose to be of UTC time
 				'user' => array(
 					'id' => $version->user_id,
 					'display_name' => $version->display_name,
