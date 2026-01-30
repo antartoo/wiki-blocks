@@ -186,6 +186,7 @@ class Wilcoskywb_Wiki_Blocks_Ajax {
 		foreach ( $versions as $version ) {
 			// Decode HTML entities so content displays properly in version history
 			$decoded_content = html_entity_decode( $version->content, ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+			$created_date = new DateTime($version->created_at);
 			
 			$formatted_versions[] = array(
 				'id' => $version->id,
@@ -193,7 +194,8 @@ class Wilcoskywb_Wiki_Blocks_Ajax {
 				'content' => $decoded_content,
 				'change_summary' => $version->change_summary,
 				'is_current' => (bool) $version->is_current,
-				'created_at' => $version->created_at . " UTC", // add timezone info to the date string for frontend JS to correctly display as locale time, database timestamp retrieved is suppose to be of UTC time
+				'created_at' => $created_date->format('Y-m-d\TH:i:s\Z'), // Format as "2026-01-01T12:00:00Z"
+				// Modified by antartoo: use ISO 8601 standard format, so that frontend correctly displays locale time, database timestamp retrieved is suppose to be of UTC time
 				'user' => array(
 					'id' => $version->user_id,
 					'display_name' => $version->display_name,
