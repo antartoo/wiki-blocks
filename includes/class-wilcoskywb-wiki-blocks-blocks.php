@@ -199,7 +199,7 @@ class Wilcoskywb_Wiki_Blocks_Blocks {
 
 		// Find wiki blocks and enhance them
 		$content = preg_replace_callback(
-			'/<div[^>]*class="[^"]*wilcoskywb-wiki-block[^"]*"[^>]*data-block-id="([^"]*)"[^>]*>(.*?)<\/div>/s',
+			'/<div[^>]*class="[^"]*wilcoskywb-wiki-block[^"]*"[^>]*data-block-id="([^"]*)"[^>]*>(.*?<\/div>)<\/div>/s',
 			array( $this, 'enhance_wiki_block_match' ),
 			$content
 		);
